@@ -1,0 +1,6 @@
+{
+    "buildCommand": "cd niagaos && pnpm install && pnpm build --filter=@niagaos/web",
+    "outputDirectory": "niagaos/apps/web/dist",
+    "installCommand": "npm install -g pnpm && pnpm install",
+    "framework": "vite"
+}
