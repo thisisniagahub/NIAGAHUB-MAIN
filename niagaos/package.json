@@ -1,0 +1,26 @@
+{
+  "name": "niagaos",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "pnpm@9.0.0",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "lint": "turbo lint",
+    "test": "turbo test",
+    "test:e2e": "turbo test:e2e",
+    "clean": "turbo clean && rm -rf node_modules",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "db:push": "pnpm --filter @niagaos/database db:push",
+    "db:generate": "pnpm --filter @niagaos/database generate",
+    "db:studio": "pnpm --filter @niagaos/database studio"
+  },
+  "devDependencies": {
+    "turbo": "^2.3.0",
+    "prettier": "^3.2.0",
+    "typescript": "^5.4.0"
+  }
+}

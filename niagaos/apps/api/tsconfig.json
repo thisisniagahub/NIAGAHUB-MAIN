@@ -1,0 +1,14 @@
+{
+    "extends": "@niagaos/config/typescript/node",
+    "compilerOptions": {
+        "rootDir": "src",
+        "outDir": "dist"
+    },
+    "include": [
+        "src"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist"
+    ]
+}

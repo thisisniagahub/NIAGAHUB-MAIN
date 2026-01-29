@@ -1,0 +1,34 @@
+{
+  "sessionId": "3dc23f3e-6ca8-4e3e-9ba2-c6dee2512acb",
+  "startTime": "2026-01-23T13:13:43.264Z",
+  "lastUpdated": "2026-01-23T13:13:43.281Z",
+  "history": [
+    {
+      "id": "55d06ea7-da83-4c1f-813a-f3a0659db159",
+      "role": "user",
+      "content": "Create a Rust hello world",
+      "timestamp": "2026-01-23T13:13:43.280Z",
+      "provider": "gemini",
+      "metadata": {}
+    },
+    {
+      "id": "e14da723-5f73-493d-840a-c8e0f7136b10",
+      "role": "model",
+      "content": "Here is the code...",
+      "timestamp": "2026-01-23T13:13:43.281Z",
+      "provider": "gemini",
+      "metadata": {}
+    }
+  ],
+  "context": {
+    "activeFiles": [
+      "main.rs"
+    ],
+    "compressed": false
+  },
+  "meta": {
+    "totalTokens": 0,
+    "errorCount": 0,
+    "status": "active"
+  }
+}

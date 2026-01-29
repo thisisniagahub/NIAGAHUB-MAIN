@@ -1,0 +1,6 @@
+2026/01/23-10:20:33.267 34c8 Creating DB c:\Users\megat\NiagaHub-SuperApp\notebookllm-mcp\chrome_profile_v2\Default\WebStorage\9\IndexedDB\indexeddb.leveldb since it was missing.
+2026/01/23-10:20:33.277 34c8 Reusing MANIFEST c:\Users\megat\NiagaHub-SuperApp\notebookllm-mcp\chrome_profile_v2\Default\WebStorage\9\IndexedDB\indexeddb.leveldb/MANIFEST-000001
+2026/01/23-11:32:44.883 13a0 Level-0 table #5: started
+2026/01/23-11:32:44.887 13a0 Level-0 table #5: 46739 bytes OK
+2026/01/23-11:32:44.890 13a0 Delete type=0 #3
+2026/01/23-11:32:44.891 13a0 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

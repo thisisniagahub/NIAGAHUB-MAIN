@@ -1,0 +1,15 @@
+2026/01/23-09:40:19.617 45e4 Reusing MANIFEST c:\Users\megat\NiagaHub-SuperApp\notebookllm-mcp\chrome_profile_v2\Default\Local Storage\leveldb/MANIFEST-000001
+2026/01/23-09:40:19.632 45e4 Recovering log #3
+2026/01/23-09:40:19.638 45e4 Reusing old log c:\Users\megat\NiagaHub-SuperApp\notebookllm-mcp\chrome_profile_v2\Default\Local Storage\leveldb/000003.log 
+2026/01/23-10:21:17.392 7e20 Level-0 table #5: started
+2026/01/23-10:21:17.399 7e20 Level-0 table #5: 41230 bytes OK
+2026/01/23-10:21:17.403 7e20 Delete type=0 #3
+2026/01/23-10:42:19.182 7e20 Level-0 table #7: started
+2026/01/23-10:42:19.190 7e20 Level-0 table #7: 41310 bytes OK
+2026/01/23-10:42:19.194 7e20 Delete type=0 #4
+2026/01/23-11:59:12.839 7e20 Level-0 table #9: started
+2026/01/23-11:59:12.848 7e20 Level-0 table #9: 77731 bytes OK
+2026/01/23-11:59:12.851 7e20 Delete type=0 #6
+2026/01/23-12:04:16.287 7e20 Level-0 table #11: started
+2026/01/23-12:04:16.294 7e20 Level-0 table #11: 20767 bytes OK
+2026/01/23-12:04:16.297 7e20 Delete type=0 #8

@@ -1,0 +1,18 @@
+{
+    "name": "@niagaos/types",
+    "version": "0.0.1",
+    "private": true,
+    "main": "./src/index.ts",
+    "types": "./src/index.ts",
+    "exports": {
+        ".": "./src/index.ts"
+    },
+    "scripts": {
+        "lint": "eslint src/",
+        "clean": "rm -rf dist"
+    },
+    "devDependencies": {
+        "@niagaos/config": "workspace:*",
+        "typescript": "^5.4.0"
+    }
+}

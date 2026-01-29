@@ -1,0 +1,15 @@
+{
+  "sessionId": "23b989c7-c97c-452c-b810-03f62c628794",
+  "startTime": "2026-01-24T10:38:54.658Z",
+  "lastUpdated": "2026-01-24T10:38:54.658Z",
+  "history": [],
+  "context": {
+    "activeFiles": [],
+    "compressed": false
+  },
+  "meta": {
+    "totalTokens": 0,
+    "errorCount": 0,
+    "status": "active"
+  }
+}

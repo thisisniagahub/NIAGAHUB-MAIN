@@ -1,0 +1,70 @@
+{
+   "checksum": "9ea712b54f6ff67b989d0d540e67bfcb",
+   "roots": {
+      "bookmark_bar": {
+         "children": [  ],
+         "date_added": "13413606019294855",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Bookmarks bar",
+         "type": "folder"
+      },
+      "other": {
+         "children": [ {
+            "date_added": "13405236414060988",
+            "date_last_used": "0",
+            "guid": "9c3c5347-7b6f-44f0-bf01-c06e80e8e24a",
+            "id": "5",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Claude 4 prompt engineering best practices - Claude Docs",
+            "type": "url",
+            "url": "https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/claude-4-best-practices#example-creating-an-analytics-dashboard"
+         }, {
+            "date_added": "13408120851568673",
+            "date_last_used": "0",
+            "guid": "73c97d05-3a59-4ca7-805e-c86aa85a03d1",
+            "id": "6",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Gemini 3 Prompting: Best Practices for General Usage",
+            "type": "url",
+            "url": "https://www.philschmid.de/gemini-3-prompt-practices"
+         }, {
+            "date_added": "13408200633114353",
+            "date_last_used": "0",
+            "guid": "430429d5-13d9-4b75-aa6b-b34aadb4c53d",
+            "id": "7",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Anything - AI app builder",
+            "type": "url",
+            "url": "https://www.createanything.com/build/d3aa6124-c175-4b7c-992d-0a552913fa6a?thread=n&view=87c268d9-5b08-4f52-8b05-55e77d0b9119"
+         } ],
+         "date_added": "13413606019294855",
+         "date_last_used": "0",
+         "date_modified": "13408200633114353",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Other bookmarks",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13413606019294855",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Mobile bookmarks",
+         "type": "folder"
+      }
+   },
+   "sync_metadata": "CpYCCvUBCIiBAhLuASAAkgHZAQrWAQoOY2hyb21lX3N5bmNfYm0SBTUxIWJtGhIJl1dcQARJBgARl1dcQARJBgAiNAn85C1ABEkGABADGcVZ2EZcBP5rIAEqHDUxIWJtL2ZkOjkxNjM3MjM1NTk0Njg4OTMxNjEiNAn85C1ABEkGABADGcVZ2EZcBP5rIAEqHDUxIWJtL2ZkOjkxNjM3MjM1NTk0Njg4OTMxNjEiNAn85C1ABEkGABADGcVZ2EZcBP5rIAEqHDUxIWJtL2ZkOjkxNjM3MjM1NTk0Njg4OTMxNjEpSC1fQARJBgDqAQwItKPLywYQwMKX4QISACoYVnd3cUNWaXJQam9FbzRhRHVKcXdidz09SAMSqwEIARKmAQoceXhKLzZmdmtlY3I3a3A1RVF6QjR0V0xwZGJFPRJOWjpBRHF0QVp6M0xWS3p3NGJFQmJqNDBsbWpFM3pFSjBqNkZrc1p3NHJqaDNaQzk3UTBJK0RzVTdKRU9iUnZONGtjUUtRbXdFR2huT1BGGAAgACgAMPzJt4HEoJIDOABAAEocYVJDV0xnaEY5YjVJbnFLSUR2dUovanZRa0ZjPVoAZQAAAAAS7AEIBxLnAQoccEJXVU1Gb2pjYTRHbEY1RFVZakZ4S29WWWFnPRJmWjpBRHF0QVp4dGMvL0ZLNGhNemdGMGxYaTVOOW9uUXBuK2dmN1A4S3c2cXorT1MzcVdHVGp4M0VnM05PV1pNSmx6d0ZOUzVWNVcvcERGVVVvcDN1UDJFOXdwcU9IRUpibld0UT09GAAgACgAMMiToJybg5EDOJuGy7KqM0CbhsuyqjNKHE5qa1RQLzU1MXBxZm5xMDBkOGt5THAra1Njcz1aHyIdtkFKTDgzSzd3UG93cU1kLzNRNTZkT0F4blhXZz1lcu8orRLDAQgDEr4BChxuamdEdTg4ZUNydlhwODZwRDdmSEdjcUZwODg9EmZaOkFEcXRBWnhtUDg0b0JGTVc4aHVBTWtCQmhQRHRFY0p0VGVlcms1ZFExT0RhVk9nVXRjVTBqMWl1WDBWTjYvcG1BUXd6VVFEVTFFWWI4QWJFQ0w4a3NJaS8vbElJNlhoU2RBPT0YACAAKAAw/Mm3gcSgkgM4AEAAShx5ek5CMDFjbjU0QTdjUlUwdVQrL1BnbVR0VW89WgBlAAAAABLrAQgGEuYBChx6aUxSdGFQZVJsaWVMSVlYUXpQcncxTVF0b0U9EmZaOkFEcXRBWnh0Yy8vRks0aE16Z0YwbFhpNU45b25RRC9FL1BON3UxL2RkRU1Za0dmYUE5S0VHdGRnaUVLNC9aSzkvSUVEajFOTFBJV3VSUG9IQytWb2tlWm9kSU1uZTNla0p3PT0YACAAKAAwi+TsgfKAkQM48MjFjKozQPDIxYyqM0ocWVdySnJGM24vVGVrWm16N2hlOE5WUFp4NlhnPVoeIhxsd2RSZDU4MkY0U3IrdDJBbmlDcXdlRkdudzg9ZQcarmwS6wEIBRLmAQocM0Z2dE4wbFM5RTVYU0MzMEtoeG5IbU5vNkowPRJmWjpBRHF0QVp4dGMvL0ZLNGhNemdGMGxYaTVOOW9ucllBcWpxU3RUVTZnRndnRXlTMmR0WTk5MXJRekVZSC9LQlpGcHJ5aVlyN2RxY2tQV2RWWHJXdHVRRTk1Tml6azY5K0ZhQT09GAAgACgAML6yvNH4rJADOPC8ka2fM0DwvJGtnzNKHGlPS2JhQjFPQjhZck5LdG9rbDFaQmE3c3ZlRT1aHiIcZGs4cFpLdXZJU2VmRnk5OXNReTlwZ3RWdVNrPWV7veq0EsMBCAISvgEKHFljU1RvbnZFU1B3cUNzNEwyY3JWaHY2OEw5OD0SZlo6QURxdEFaeHR3TlJrSlpqcjd6TFB2ZWh0VVp2cytvQ1ZJVHRIUDJpamNiVWtpWittZkQ3N1gzelkwTks2d0w3dUhQcE1ETnp3d000MUFRUVZNc1dqN2lEV1FNaGZ4LysyRXc9PRgAIAAoADD8ybeBxKCSAzgAQABKHG9QVmtod0JSYlY2NUtDV1IyK0lPTkhXb091OD1aAGUAAAAAMAE4AA==",
+   "version": 1
+}
