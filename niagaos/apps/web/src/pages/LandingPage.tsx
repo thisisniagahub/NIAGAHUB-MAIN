@@ -38,9 +38,12 @@ export function LandingPage() {
             </div>
 
             {/* ========== NAVBAR ========== */}
-            <nav className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ${scrollY > 50 ? 'backdrop-blur-xl bg-[#0A1628]/80 border-b border-white/5' : ''}`}>
+            <nav className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ${scrollY > 50 ? 'backdrop-blur-2xl bg-[#0A1628]/70 border-b border-white/5 shadow-2xl shadow-black/20' : 'bg-transparent'}`}>
                 <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-5">
-                    <img src="/assets/brand/logo-full-horizontal.jpg" alt="NIAGAHUB" className="h-8 object-contain" />
+                    {/* Badge Style Logo for Navbar */}
+                    <div className="bg-white rounded-lg p-1.5 shadow-[0_0_20px_rgba(6,182,212,0.15)] flex items-center justify-center">
+                        <img src="/assets/brand/logo-full-horizontal.jpg" alt="NIAGAHUB" className="h-5 object-contain" />
+                    </div>
 
                     <div className="flex items-center gap-6">
                         <a href="#how" className="text-sm text-gray-400 hover:text-white transition-colors hidden md:block">How it works</a>
@@ -56,11 +59,13 @@ export function LandingPage() {
 
             {/* ========== HERO: INEVITABILITY STATEMENT ========== */}
             <section className="relative min-h-screen flex flex-col items-center justify-center px-6 pt-24">
-                
-                {/* Logo with Glow */}
-                <div className={`relative w-24 h-24 mb-12 transition-all duration-1000 ${isLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}>
-                    <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 to-orange-400 rounded-full blur-[40px] opacity-30" />
-                    <img src="/assets/brand/logo-symbol.jpg" alt="" className="relative w-full h-full object-contain" />
+
+                {/* Logo with Glow & Badge Container */}
+                <div className={`relative w-28 h-28 mb-12 transition-all duration-1000 ${isLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}>
+                    <div className="absolute inset-0 bg-gradient-to-br from-cyan-500 to-purple-500 rounded-full blur-[60px] opacity-40" />
+                    <div className="relative w-full h-full bg-white rounded-3xl shadow-2xl shadow-cyan-500/20 flex items-center justify-center overflow-hidden border border-white/20 ring-1 ring-white/50">
+                        <img src="/assets/brand/logo-symbol.jpg" alt="" className="w-full h-full object-contain p-2" />
+                    </div>
                 </div>
 
                 {/* Hero Headline - Inevitability Style */}
@@ -103,7 +108,7 @@ export function LandingPage() {
                         They fail because execution depends on human availability.
                     </p>
                     <p className="text-gray-500 leading-relaxed">
-                        When decisions wait, growth slows. When staff is overloaded, founders become operators. 
+                        When decisions wait, growth slows. When staff is overloaded, founders become operators.
                         This is not a motivation problem. It's an operating system problem.
                     </p>
                 </div>
