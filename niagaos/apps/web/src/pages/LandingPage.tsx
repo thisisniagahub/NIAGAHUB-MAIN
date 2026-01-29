@@ -1,11 +1,5 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { NiagaBotWidget } from '../components/NiagaBotWidget';
-
-// =========================================
-// NIAGAHUB LANDING PAGE - OPENAI-GRADE
-// =========================================
-// Following MESSAGING_CONSTITUTION.md
-// Pattern: Belief Engineering + Minimal Design + Inevitability Framing
 
 export function LandingPage() {
     const [isLoaded, setIsLoaded] = useState(false);
@@ -18,266 +12,159 @@ export function LandingPage() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    const features = [
+        { icon: '🛒', title: 'Retail Core', desc: 'Unified signals from orders, inventory, and kiosk.', size: 'col-span-2' },
+        { icon: '💰', title: 'Finance AI', desc: 'Automated treasury and reconciliation.', size: 'col-span-1' },
+        { icon: '📣', title: 'Marketing Engine', desc: 'GenAI-powered content orchestration.', size: 'col-span-1' },
+        { icon: '⚙️', title: 'Operations Hub', desc: 'Synchronized supplier workflows.', size: 'col-span-2' },
+    ];
+
     return (
-        <div className="min-h-screen bg-[#0A1628] text-white font-sans antialiased selection:bg-cyan-500/30">
+        <div className="min-h-screen bg-[#030712] text-white selection:bg-cyan-500/30 overflow-x-hidden font-sans">
 
-            {/* ========== SUBTLE BRAND PATTERN ========== */}
-            <div
-                className="fixed inset-0 pointer-events-none z-0 opacity-[0.02]"
-                style={{
-                    backgroundImage: `url('/assets/brand/brand-pattern.jpg')`,
-                    backgroundSize: '500px',
-                    backgroundRepeat: 'repeat',
-                }}
-            />
-
-            {/* ========== AMBIENT GLOWS ========== */}
-            <div className="fixed inset-0 pointer-events-none overflow-hidden">
-                <div className="absolute -top-[500px] left-1/2 -translate-x-1/2 w-[1200px] h-[800px] bg-cyan-500/10 rounded-full blur-[300px]" />
-                <div className="absolute -bottom-[300px] -right-[200px] w-[600px] h-[600px] bg-orange-500/8 rounded-full blur-[200px]" />
+            {/* Ambient Background Elements */}
+            <div className="fixed inset-0 pointer-events-none z-0">
+                <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-cyan-500/10 rounded-full blur-[120px] animate-pulse" />
+                <div className="absolute bottom-[-5%] right-[-5%] w-[30%] h-[30%] bg-purple-500/10 rounded-full blur-[100px]" />
+                <div
+                    className="absolute inset-0 opacity-[0.03] pointer-events-none"
+                    style={{ backgroundImage: `url('/assets/brand/brand-pattern.jpg')`, backgroundSize: '400px' }}
+                />
             </div>
 
-            {/* ========== NAVBAR ========== */}
-            <nav className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ${scrollY > 50 ? 'backdrop-blur-2xl bg-[#0A1628]/70 border-b border-white/5 shadow-2xl shadow-black/20' : 'bg-transparent'}`}>
-                <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-5">
-                    {/* Badge Style Logo for Navbar */}
-                    <div className="bg-white rounded-lg p-1.5 shadow-[0_0_20px_rgba(6,182,212,0.15)] flex items-center justify-center">
-                        <img src="/assets/brand/logo-full-horizontal.jpg" alt="NIAGAHUB" className="h-5 object-contain" />
+            {/* Navbar */}
+            <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 px-6 py-4 ${scrollY > 20 ? 'backdrop-blur-2xl bg-black/40 border-b border-white/5' : ''}`}>
+                <div className="max-w-7xl mx-auto flex items-center justify-between">
+                    <div className="flex items-center gap-3 bg-white/5 border border-white/10 p-1.5 pr-4 rounded-xl backdrop-blur-md">
+                        <div className="bg-white rounded-lg p-1 shadow-lg flex items-center justify-center w-8 h-8">
+                            <img src="/assets/brand/logo-symbol.jpg" alt="" className="w-full h-full object-contain" />
+                        </div>
+                        <span className="font-display font-bold tracking-tighter text-lg">NIAGAHUB</span>
                     </div>
 
-                    <div className="flex items-center gap-6">
-                        <a href="#how" className="text-sm text-gray-400 hover:text-white transition-colors hidden md:block">How it works</a>
+                    <div className="flex items-center gap-8">
+                        <a href="#how" className="text-sm font-medium text-gray-400 hover:text-white transition-all">Inside the Hub</a>
                         <button
                             onClick={() => window.location.href = '/auth'}
-                            className="px-5 py-2 text-sm font-medium rounded-full bg-white text-black hover:bg-gray-100 transition-all"
+                            className="bg-white text-black px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-cyan-50 transition-all shadow-xl shadow-white/5 active:scale-95"
                         >
-                            Get started
+                            Get Started
                         </button>
                     </div>
                 </div>
             </nav>
 
-            {/* ========== HERO: INEVITABILITY STATEMENT ========== */}
-            <section className="relative min-h-screen flex flex-col items-center justify-center px-6 pt-24">
-
-                {/* Logo with Glow & Badge Container */}
-                <div className={`relative w-28 h-28 mb-12 transition-all duration-1000 ${isLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}>
-                    <div className="absolute inset-0 bg-gradient-to-br from-cyan-500 to-purple-500 rounded-full blur-[60px] opacity-40" />
-                    <div className="relative w-full h-full bg-white rounded-3xl shadow-2xl shadow-cyan-500/20 flex items-center justify-center overflow-hidden border border-white/20 ring-1 ring-white/50">
-                        <img src="/assets/brand/logo-symbol.jpg" alt="" className="w-full h-full object-contain p-2" />
-                    </div>
-                </div>
-
-                {/* Hero Headline - Inevitability Style */}
-                <h1 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center leading-[1.1] tracking-tight max-w-4xl mb-8 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                    The future of business operations
-                    <span className="block mt-2 bg-gradient-to-r from-cyan-400 via-blue-400 to-orange-400 bg-clip-text text-transparent">
-                        is autonomous.
-                    </span>
-                </h1>
-
-                {/* Subheadline - Calm, Precise */}
-                <p className={`text-lg md:text-xl text-gray-400 text-center max-w-2xl mb-12 leading-relaxed transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                    Run a company that no longer waits for people to act.
-                </p>
-
-                {/* CTA - Invitation, Not Request */}
-                <div className={`flex flex-col sm:flex-row gap-4 transition-all duration-1000 delay-300 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                    <button
-                        onClick={() => window.location.href = '/auth'}
-                        className="px-8 py-4 text-base font-medium rounded-full bg-white text-black hover:bg-gray-100 transition-all"
-                    >
-                        Join early
-                    </button>
-                    <button
-                        onClick={() => document.getElementById('how')?.scrollIntoView({ behavior: 'smooth' })}
-                        className="px-8 py-4 text-base font-medium rounded-full border border-white/20 hover:bg-white/5 transition-all text-gray-300"
-                    >
-                        See how it works
-                    </button>
-                </div>
-            </section>
-
-            {/* ========== REALITY SECTION ========== */}
-            <section className="py-32 px-6">
-                <div className="max-w-3xl mx-auto text-center">
-                    <h2 className="text-3xl md:text-4xl font-semibold mb-8 leading-tight">
-                        Businesses don't fail from lack of ideas.
-                    </h2>
-                    <p className="text-lg text-gray-400 leading-relaxed mb-6">
-                        They fail because execution depends on human availability.
-                    </p>
-                    <p className="text-gray-500 leading-relaxed">
-                        When decisions wait, growth slows. When staff is overloaded, founders become operators.
-                        This is not a motivation problem. It's an operating system problem.
-                    </p>
-                </div>
-            </section>
-
-            {/* ========== THE SHIFT ========== */}
-            <section className="py-24 px-6 border-t border-white/5">
-                <div className="max-w-3xl mx-auto text-center">
-                    <p className="text-cyan-400 text-sm font-medium tracking-wider uppercase mb-6">The Shift</p>
-                    <h2 className="text-3xl md:text-4xl font-semibold mb-8 leading-tight">
-                        Modern businesses don't need more dashboards.
-                    </h2>
-                    <p className="text-lg text-gray-400 leading-relaxed">
-                        They need a system that understands context.<br />
-                        <span className="text-white">One brain. One flow. One source of execution.</span>
-                    </p>
-                </div>
-            </section>
-
-            {/* ========== THE BRAIN (Four Pillars) ========== */}
-            <section id="how" className="py-32 px-6 border-t border-white/5">
-                <div className="max-w-5xl mx-auto">
-                    <div className="text-center mb-16">
-                        <p className="text-cyan-400 text-sm font-medium tracking-wider uppercase mb-6">The Brain</p>
-                        <h2 className="text-3xl md:text-4xl font-semibold mb-6">
-                            One intelligence layer for your entire operation.
-                        </h2>
-                        <p className="text-gray-400 max-w-2xl mx-auto">
-                            Retail signals inform finance. Finance data informs decisions. Decisions trigger execution.
-                            Nothing is siloed. Nothing is manual.
-                        </p>
+            {/* Hero Section */}
+            <section className="relative pt-44 pb-32 px-6">
+                <div className="max-w-7xl mx-auto text-center flex flex-col items-center">
+                    <div className={`group relative mb-12 transition-all duration-1000 ${isLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
+                        <div className="absolute inset-0 bg-cyan-500/20 rounded-3xl blur-3xl group-hover:bg-cyan-400/30 transition-all" />
+                        <div className="relative bg-white p-4 rounded-[2.5rem] shadow-2xl shadow-cyan-500/20 border border-white/10 ring-1 ring-white/20 transform transition-transform group-hover:scale-105 duration-500">
+                            <img src="/assets/brand/logo-symbol.jpg" alt="Logo" className="w-24 h-24 object-contain rounded-2xl" />
+                        </div>
                     </div>
 
-                    <div className="grid md:grid-cols-2 gap-6">
-                        {[
-                            { icon: '🛒', title: 'Retail', desc: 'Orders, inventory, kiosk, POS — unified.' },
-                            { icon: '💰', title: 'Finance', desc: 'Payments, invoices, reports — automated.' },
-                            { icon: '📣', title: 'Marketing', desc: 'Campaigns, content, social — orchestrated.' },
-                            { icon: '⚙️', title: 'Operations', desc: 'Staff, suppliers, workflows — synchronized.' },
-                        ].map((pillar, i) => (
-                            <div key={i} className="p-8 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-white/10 transition-all">
-                                <span className="text-3xl mb-4 block">{pillar.icon}</span>
-                                <h3 className="text-xl font-semibold mb-2">{pillar.title}</h3>
-                                <p className="text-gray-500">{pillar.desc}</p>
+                    <h1 className={`font-display text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight leading-[0.95] mb-8 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
+                        The Autonomous <br />
+                        <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">Business Era.</span>
+                    </h1>
+
+                    <p className={`text-gray-400 text-lg md:text-xl max-w-2xl mb-12 leading-relaxed transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+                        NIAGAHUB is the cognitive operating system for modern enterprises.
+                        Replace fragmented tools with one sentient brain.
+                    </p>
+
+                    <div className={`flex flex-col sm:flex-row gap-5 transition-all duration-1000 delay-300 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+                        <button className="bg-white text-black px-10 py-5 rounded-full text-lg font-bold hover:bg-gray-100 transition-all shadow-2xl active:scale-95 transition-transform">
+                            Join Early Access
+                        </button>
+                        <button className="bg-white/5 border border-white/10 backdrop-blur-md text-white px-10 py-5 rounded-full text-lg font-bold hover:bg-white/10 transition-all active:scale-95 transition-transform">
+                            See how it works
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            {/* Bento Grid Features */}
+            <section id="how" className="py-32 px-6">
+                <div className="max-w-6xl mx-auto">
+                    <div className="mb-20">
+                        <span className="text-cyan-400 font-mono text-xs uppercase tracking-widest bg-cyan-500/5 px-3 py-1 rounded-full border border-cyan-500/10">Capabilities</span>
+                        <h2 className="font-display text-4xl md:text-5xl font-bold mt-6">One interface. <br /><span className="text-gray-500">Infinite orchestration.</span></h2>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        {features.map((f, i) => (
+                            <div key={i} className={`${f.size} bg-gradient-to-br from-white/[0.03] to-white/[0.01] border border-white/5 rounded-3xl p-10 hover:border-white/10 transition-all group overflow-hidden relative backdrop-blur-sm`}>
+                                <div className="absolute top-[-20%] right-[-10%] w-40 h-40 bg-cyan-500/10 rounded-full blur-[60px] opacity-0 group-hover:opacity-100 transition-opacity" />
+                                <span className="text-4xl mb-8 block grayscale group-hover:grayscale-0 transition-all duration-500">{f.icon}</span>
+                                <h3 className="font-display text-2xl font-bold mb-3">{f.title}</h3>
+                                <p className="text-gray-500 leading-relaxed max-w-xs group-hover:text-gray-400 transition-colors">{f.desc}</p>
                             </div>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* ========== DIGITAL OPERATOR (HUB Intro) ========== */}
-            <section className="py-32 px-6 border-t border-white/5">
-                <div className="max-w-3xl mx-auto text-center">
-                    <p className="text-orange-400 text-sm font-medium tracking-wider uppercase mb-6">Meet HUB</p>
-                    <h2 className="text-3xl md:text-4xl font-semibold mb-8 leading-tight">
-                        NIAGAHUB doesn't give you tools.<br />
-                        <span className="text-gray-400">It gives you a digital operator.</span>
-                    </h2>
-                    <p className="text-lg text-gray-400 leading-relaxed mb-8">
-                        It reads updates. Summarizes what matters. Waits for your approval. Then executes — instantly.
-                    </p>
-                    <p className="text-white font-medium">
-                        You stay in control. The system does the work.
-                    </p>
-                </div>
-            </section>
-
-            {/* ========== ZERO-CLICK MORNING ========== */}
-            <section className="py-32 px-6 border-t border-white/5">
+            {/* Zero-Click Timeline */}
+            <section className="py-40 px-6 bg-gradient-to-b from-transparent via-cyan-500/5 to-transparent">
                 <div className="max-w-4xl mx-auto">
-                    <div className="text-center mb-16">
-                        <p className="text-cyan-400 text-sm font-medium tracking-wider uppercase mb-6">Zero-Click Morning</p>
-                        <h2 className="text-3xl md:text-4xl font-semibold">
-                            How your day begins.
-                        </h2>
+                    <div className="text-center mb-24">
+                        <h2 className="font-display text-4xl md:text-5xl font-bold mb-6">Zero-Click <span className="text-gray-500">Mornings.</span></h2>
+                        <p className="text-gray-400">The first 5 minutes of your day, managed by HUB.</p>
                     </div>
 
-                    <div className="space-y-6">
-                        {[
-                            { time: '08:00', action: 'Notification arrives', detail: 'HUB detects overnight activity' },
-                            { time: '08:02', action: 'AI summarizes', detail: '"RM12,450 collected. 2 approvals pending."' },
-                            { time: '08:03', action: 'You approve', detail: 'One tap. That\'s all.' },
-                            { time: '08:04', action: 'System executes', detail: 'Payments sent. Staff notified. Done.' },
-                        ].map((step, i) => (
-                            <div key={i} className="flex items-start gap-6 p-6 rounded-xl bg-white/[0.02] border border-white/5">
-                                <span className="text-cyan-400 font-mono text-sm">{step.time}</span>
-                                <div>
-                                    <h3 className="font-semibold mb-1">{step.action}</h3>
-                                    <p className="text-gray-500 text-sm">{step.detail}</p>
+                    <div className="relative">
+                        <div className="absolute left-[20px] top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-white/10 to-transparent" />
+                        <div className="space-y-20">
+                            {[
+                                { time: '08:00', title: 'Contextual Ingestion', desc: 'HUB parses overnight signals across all storefronts and bank feeds.' },
+                                { time: '08:02', title: 'Cognitive Summary', desc: 'A prioritized report waiting for you. Highlighting what needs eyes.' },
+                                { time: '08:05', title: 'Single-Tap Execution', desc: 'Approve payroll, trigger bulk restocks, and confirm strategy shifts.' },
+                            ].map((step, i) => (
+                                <div key={i} className="flex gap-10 items-start relative group">
+                                    <div className="w-10 h-10 rounded-full bg-black border border-white/10 flex items-center justify-center shrink-0 z-10 group-hover:border-cyan-500/50 transition-colors">
+                                        <div className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
+                                    </div>
+                                    <div>
+                                        <span className="font-mono text-cyan-400 text-sm mb-2 block">{step.time}</span>
+                                        <h3 className="text-2xl font-bold mb-2 font-display">{step.title}</h3>
+                                        <p className="text-gray-500 max-w-lg leading-relaxed">{step.desc}</p>
+                                    </div>
                                 </div>
-                            </div>
-                        ))}
-                    </div>
-
-                    <p className="text-center text-gray-500 mt-12">
-                        No dashboards. No data entry. No operational noise.
-                    </p>
-                </div>
-            </section>
-
-            {/* ========== TRUST LAYER ========== */}
-            <section className="py-32 px-6 border-t border-white/5">
-                <div className="max-w-3xl mx-auto text-center">
-                    <p className="text-green-400 text-sm font-medium tracking-wider uppercase mb-6">Built for Trust</p>
-                    <h2 className="text-3xl md:text-4xl font-semibold mb-12">
-                        AI acts. You decide.
-                    </h2>
-
-                    <div className="grid sm:grid-cols-2 gap-6 text-left">
-                        {[
-                            'Human approval always required',
-                            'Every action logged and auditable',
-                            'Clear authority boundaries',
-                            'Fail-safe execution layers',
-                        ].map((item, i) => (
-                            <div key={i} className="flex items-center gap-3 p-4 rounded-lg bg-white/[0.02]">
-                                <span className="text-green-400">✓</span>
-                                <span className="text-gray-300">{item}</span>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
                     </div>
                 </div>
             </section>
 
-            {/* ========== OUTCOME ========== */}
-            <section className="py-32 px-6 border-t border-white/5">
-                <div className="max-w-3xl mx-auto text-center">
-                    <h2 className="text-3xl md:text-4xl font-semibold mb-8 leading-tight">
-                        Less dependency on staff.<br />
-                        Faster execution cycles.<br />
-                        Clearer decision-making.
-                    </h2>
-                    <p className="text-lg text-gray-400">
-                        Not by working harder — <span className="text-white">but by operating smarter.</span>
-                    </p>
+            {/* Final CTA */}
+            <section className="py-60 px-6 relative">
+                <div className="absolute inset-0 pointer-events-none">
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-500/10 rounded-full blur-[150px]" />
                 </div>
-            </section>
-
-            {/* ========== FINAL CTA - INEVITABILITY CLOSING ========== */}
-            <section className="py-32 px-6 border-t border-white/5">
-                <div className="max-w-3xl mx-auto text-center">
-                    <h2 className="text-3xl md:text-5xl font-bold mb-8 leading-tight">
-                        The autonomous enterprise era
-                        <span className="block mt-2 bg-gradient-to-r from-cyan-400 to-orange-400 bg-clip-text text-transparent">
-                            has already begun.
-                        </span>
+                <div className="max-w-4xl mx-auto text-center">
+                    <h2 className="font-display text-5xl md:text-7xl font-extrabold mb-10 tracking-tight leading-none">
+                        Owned by humans. <br />
+                        <span className="text-gray-500">Run by NIAGAHUB.</span>
                     </h2>
-                    <p className="text-lg text-gray-400 mb-12">
-                        NIAGAHUB is how you enter it.
-                    </p>
-
-                    <button
-                        onClick={() => window.location.href = '/auth'}
-                        className="px-10 py-5 text-lg font-medium rounded-full bg-white text-black hover:bg-gray-100 transition-all"
-                    >
-                        Join early
+                    <button className="bg-white text-black px-12 py-6 rounded-full text-xl font-black hover:scale-105 transition-all shadow-[0_0_50px_rgba(255,255,255,0.15)] active:scale-95 transition-transform">
+                        Claim Your Domain
                     </button>
+                    <p className="mt-10 text-gray-500 font-mono text-sm tracking-widest uppercase">Limited Availability for Q1 2026</p>
                 </div>
             </section>
 
-            {/* ========== FOOTER ========== */}
-            <footer className="border-t border-white/5 py-12 px-6">
-                <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-                    <img src="/assets/brand/logo-full-horizontal.jpg" className="h-6 object-contain opacity-60" alt="NIAGAHUB" />
-                    <p className="text-gray-600 text-sm">© 2026 NiagaHub Inc.</p>
+            <footer className="py-20 border-t border-white/5 px-6">
+                <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
+                    <div className="flex items-center gap-3 opacity-50 grayscale hover:opacity-100 hover:grayscale-0 transition-all cursor-pointer">
+                        <img src="/assets/brand/logo-symbol.jpg" alt="" className="w-6 h-6 object-contain" />
+                        <span className="font-display font-bold tracking-tighter">NIAGAHUB</span>
+                    </div>
+                    <p className="text-gray-600 text-sm font-mono tracking-tighter">NIAGAHUB © 2026 — AUTONOMOUS OPERATING SYSTEM</p>
                 </div>
             </footer>
 
-            {/* NiagaBot Widget */}
             <NiagaBotWidget />
         </div>
     );
